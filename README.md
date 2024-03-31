@@ -40,3 +40,6 @@ Given the user is using a mobile device to access the app, When the user selects
 
 **Scenario**:
 Given the user is viewing event details, When the user selects the "Visualize Data" option, Then the app should display charts or graphs representing event data such as attendance, popularity, or location distribution.
+
+##USING SERVERLESS FUNCTIONS:
+In the Meet app, serverless functions will be employed for various critical functionalities, including event notifications, real-time data processing, user authentication, and event recommendations. These functions offer a lightweight and scalable solution for backend processes, ensuring efficient resource utilization and dynamic scaling based on user demand. With serverless technology, the Meet app can deliver personalized experiences while maintaining cost-effectiveness and seamless scalability.
