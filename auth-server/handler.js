@@ -64,7 +64,6 @@ module.exports.getAccessToken = async (event) => {
 };
 
 module.exports.getCalendarEvents = async (event) => {
-
   const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
   oAuth2Client.setCredentials({ access_token });
 
@@ -84,7 +83,8 @@ module.exports.getCalendarEvents = async (event) => {
           resolve(response);
         }
       }
-    )
+    );
+  })
       .then((results) => {
         return {
           statusCode: 200,
@@ -100,6 +100,5 @@ module.exports.getCalendarEvents = async (event) => {
           statusCode: 500,
           body: JSON.stringify(error),
         };
-      });
-  })
-}
+      });  
+};
