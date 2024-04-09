@@ -11,10 +11,10 @@ describe('<EventList /> component', () => {
     expect(EventListComponent.queryByRole("list")).toBeInTheDocument();
   });
 
-  test('renders correct number of events', () => {
-    EventListComponent.rerender(<EventList events={
-        [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
-    } />);
+  test("renders correct number of events", () => {
+    EventListComponent.rerender(
+      <EventList events={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]} />
+    );
     expect(EventListComponent.getAllByRole("listitem")).toHaveLength(4);
   });
 });
