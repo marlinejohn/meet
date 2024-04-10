@@ -1,6 +1,8 @@
-const Event = () => {
+const Event = ({event}) => {
     return (
-      <li></li>
+      <li>
+         <h3>{event.summary}</h3>
+      </li>
     );
   }
   
