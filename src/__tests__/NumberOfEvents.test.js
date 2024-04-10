@@ -11,7 +11,7 @@ describe('<NumberOfEvents /> component' , ()=> {
       test('has element with role "textbox"', ()=>{
         let textbox = NumberOfEventsComponent.queryByRole('textbox');
         expect(textbox).toBeInTheDocument();
-      })
+      });
 
       test('render 32 events as default', () => {
         expect(NumberOfEventsComponent.queryByRole('textbox')).toHaveValue('32');
@@ -22,5 +22,5 @@ describe('<NumberOfEvents /> component' , ()=> {
         const numOfEvents = NumberOfEventsComponent.queryByRole('textbox');
         await user.type(numOfEvents, '{backspace}{backspace}10');
         expect(numOfEvents).toHaveValue('10');
-      })
+      });
 })
