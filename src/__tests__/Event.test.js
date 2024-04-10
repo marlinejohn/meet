@@ -18,4 +18,16 @@ describe('Event /> component' , () => {
       test('renders event title', () => {
         expect(EventComponent.queryByText(allEvents[0].summary)).toBeInTheDocument()
       })
+
+      test('renders event start time', () =>{
+        expect(EventComponent.queryByText(allEvents[0].created)).toBeInTheDocument()
+      })
+
+      test('renders event location', () => {
+        expect(EventComponent.queryByText(allEvents[0].location)).toBeInTheDocument();
+      });
+
+      test('event details are hidden by default', () => {
+        expect(EventComponent.container.querySelector('.details')).not.toBeInTheDocument();
+      });
 })
