@@ -1,6 +1,8 @@
 const NumberOfEvents = () => {
     return (
-        <div id="no-of-events"></div>
+        <div id="no-of-events">
+            <input />
+        </div>
     )
 }
 
