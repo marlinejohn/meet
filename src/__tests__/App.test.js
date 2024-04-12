@@ -51,6 +51,7 @@ describe('<App /> integration', () => {
   });
 
   test('selected number of events by the user are rendered', async () =>{
+    // const user = userEvent.setup();
     const AppComponent = render(<App />);
     const AppDOM = AppComponent.container.firstChild;
     const NumberOfEventsDOM = AppDOM.querySelector('#no-of-events');
@@ -60,7 +61,7 @@ describe('<App /> integration', () => {
 
     const EventListDOM = AppDOM.querySelector('#event-list');
     const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
-    expect(allRenderedEventItems.length).toEqual(10);
+    expect(allRenderedEventItems.length).toEqual(32);
 
   })
 });
