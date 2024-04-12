@@ -73,6 +73,22 @@ describe("<CitySearch /> component", () => {
 
     expect(cityTextBox).toHaveValue(BerlinGermanySuggestion.textContent);
   });
+
+  // test("updates suggestions correctly when user types a city not in allLocations", async() => {
+  //   const user = userEvent.setup();
+  //   const allEvents = await getEvents()
+  //   const allLocations = extractLocations(allEvents);
+  //   CitySearchComponent.rerender(<CitySearch allLocations={allLocations} setCurrentCity={() => { }} />);
+  
+  //   const cityTextBox = CitySearchComponent.queryByRole("textbox");
+  //   await user.type(cityTextBox, "Paris, France");
+  
+  //   const suggestionList = CitySearchComponent.queryByRole("list");
+  //   const suggestionItems = within(suggestionList).queryAllByRole("listitem");
+    
+  //   expect(suggestionItems).toHaveLength(1);
+  //   expect(suggestionItems[0]).toHaveTextContent("See all cities");
+  // });
 });
 
 describe('<CitySearch /> integration', () => {

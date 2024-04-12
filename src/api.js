@@ -34,7 +34,7 @@ export const getEvents = async () => {
 
   if (token) {
     removeQuery();
-    const url =  "https://lbtl2ha29e.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" + "/" + token;
+    const url =  'https://lbtl2ha29e.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
     const response = await fetch(url);
     const result = await response.json();
     if (result) {
