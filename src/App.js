@@ -24,8 +24,6 @@ const App = () => {
     setAllLocations(extractLocations(allEvents));
   }
 
- 
-
   return (
     <div className="App">
       <CitySearch  allLocations={allLocations} setCurrentCity={setCurrentCity}/>
