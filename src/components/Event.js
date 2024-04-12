@@ -6,8 +6,8 @@ const Event = ({event}) => {
     return (
       <li>
         <h3>{event.summary}</h3>
-        <p>{event.created}</p>
-        <p>{event.location}</p>
+        <p>{event.created}</p> 
+        <p>{event.location}</p> 
         <button
           className="details-button"
           onClick={() => setShowDetails(!showDetails)}
