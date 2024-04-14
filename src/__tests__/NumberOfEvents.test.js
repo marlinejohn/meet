@@ -9,7 +9,7 @@ describe("<NumberOfEvents /> component", () => {
     );
   });
 
-  test('has element with role "textbox"', () => {
+  test('has element with role textbox', () => {
     let textbox = NumberOfEventsComponent.queryByRole("textbox");
     expect(textbox).toBeInTheDocument();
   });
