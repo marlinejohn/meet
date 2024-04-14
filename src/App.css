@@ -1,38 +1,80 @@
 .App {
-  text-align: center;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* CitySearch component */
+#city-search {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Light gray background */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* NumberOfEvents component */
+#no-of-events {
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.label {
+  font-size: 18px;
+  color: #293646; /* Dark blue */
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#no-of-events input {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* EventList component */
+#event-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Event component */
+#event-list li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #293646; /* Dark blue */
+  color: #fff; /* White text */
+  border-radius: 8px
+}
+
+.event-details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Additional styling */
+.details-button {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #ca282c; /* Red */
+  color: #fff; /* White text */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.details-button:hover {
+  background-color: #e89c1e; /* Orange on hover */
 }

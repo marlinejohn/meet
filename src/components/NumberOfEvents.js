@@ -11,6 +11,7 @@ const NumberOfEvents = ({setCurrentNOE}) => {
 
     return (
         <div id="no-of-events">
+            <label className="label"> No. of events: </label>
             <input 
             type= "text"
             value={numOfEvents}
