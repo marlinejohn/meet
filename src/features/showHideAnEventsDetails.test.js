@@ -1,6 +1,9 @@
 import { render, waitFor, within } from '@testing-library/react';
 import { loadFeature, defineFeature } from 'jest-cucumber';
 import App from '../App';
+import Event from '../components/Event';
+import { getEvents } from '../api';
+import userEvent from '@testing-library/user-event';
 
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 
@@ -9,8 +12,6 @@ defineFeature(feature, test => {
         let AppComponent;
         given('the main page open', () => {
             AppComponent = render(<App />);
-
-
         });
   
         when('the user is viewing a list of events', async() => {
@@ -40,16 +41,32 @@ defineFeature(feature, test => {
     });
 
     test('User clicks on "Show Details" button to view event details', ({ given, when, then }) => {
-        given('the user is viewing a list of events', () => {
+        let AppComponent;
+        let EventComponent;
+        let allEvents;
+        given('the user is viewing a list of events', async() => {
+            AppComponent = render(<App />);
+            const AppDOM = AppComponent.container.firstChild;
+            const EventListDOM = AppDOM.querySelector('#event-list');
+      
+            await waitFor(() => {
+              const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+              expect(EventListItems.length).toBe(32);
+            });
 
         });
 
-        when('the user clicks on the Show Details button for a specific event', () => {
+        when('the user clicks on the Show Details button for a specific event', async() => {
+            const user = userEvent.setup();
+            allEvents = await getEvents();
+            EventComponent = render(<Event event={allEvents[0]}/>)
+            const showDetails = EventComponent.queryAllByText('Show Details');
+            user.click(showDetails);
 
         });
 
         then('the event details should be displayed', () => {
-
+            expect(EventComponent.container.querySelector('.details-button')).toBeInTheDocument();
         });
     });
 
