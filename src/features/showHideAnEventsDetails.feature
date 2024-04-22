@@ -1,7 +1,7 @@
 Feature: Show/Hide Event Details
   Scenario: Details of events are hidden by default
-    Given the user is viewing a list of events
-    When the main page open
+    Given the main page open
+    When the user is viewing a list of events
     Then the event details should be hidden for all events
     And the Show Details button should be displayed for each event
 
