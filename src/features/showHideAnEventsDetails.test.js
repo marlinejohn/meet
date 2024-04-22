@@ -71,16 +71,27 @@ defineFeature(feature, test => {
     });
 
     test('User clicks on "Hide Details" button to hide event details', ({ given, when, then }) => {
-        given('the user is viewing a list of events with details displayed', () => {
+        let EventComponent;
+        let allEvents;
+        given('the user is viewing an event with details displayed', async() => {
+            const user = userEvent.setup();
+            allEvents = await getEvents();
+            EventComponent = render(<Event event={allEvents[0]} />);
+            user.click(EventComponent.queryByText('Show Details'));
+            expect(EventComponent.container.querySelector('.details-button')).toBeInTheDocument();
 
         });
 
         when('the user clicks on the Hide Details button for a specific event', () => {
+            const hideDetails = EventComponent.queryByText('Hide Details');
+            const user = userEvent.setup();
+             user.click(hideDetails);
 
         });
 
         then('the event details should be hidden', () => {
-
+            expect(EventComponent.container.querySelector('.details')).not.toBeInTheDocument();
+            expect(EventComponent.queryByText('Hide Details')).not.toBeInTheDocument();
         });
     });
     

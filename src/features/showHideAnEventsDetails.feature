@@ -11,6 +11,6 @@ Feature: Show/Hide Event Details
     Then the event details should be displayed
 
   Scenario: User clicks on "Hide Details" button to hide event details
-    Given the user is viewing a list of events with details displayed
+    Given the user is viewing an event with details displayed
     When the user clicks on the Hide Details button for a specific event
     Then the event details should be hidden
