@@ -78,3 +78,11 @@
 .details-button:hover {
   background-color: #e89c1e; /* Orange on hover */
 }
+
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}
