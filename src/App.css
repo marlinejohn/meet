@@ -89,7 +89,7 @@
 
 .charts-container{
   display: grid;
-  gap: 40px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
   margin: 20px 0;
 }
