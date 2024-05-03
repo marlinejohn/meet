@@ -25,7 +25,8 @@ const EventGenresChart = ({events}) =>{
 
       const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
         const RADIAN = Math.PI / 180;
-        const radius = outerRadius;
+        const radius = outerRadius ;
+        // const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
         const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
         const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
         return percent ? (
@@ -51,7 +52,7 @@ const EventGenresChart = ({events}) =>{
               fill="#8884d8"
               labelLine={false}
               label = {renderCustomizedLabel}
-              outerRadius={130}           
+              outerRadius={125}           
             >
              {
                 data.map((entry, index) => (
