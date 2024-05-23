@@ -43,3 +43,22 @@ Given the user is viewing event details, When the user selects the "Visualize Da
 
 ## USING SERVERLESS FUNCTIONS:
 In the Meet app, serverless functions will be employed for various critical functionalities, including event notifications, real-time data processing, user authentication, and event recommendations. These functions offer a lightweight and scalable solution for backend processes, ensuring efficient resource utilization and dynamic scaling based on user demand. With serverless technology, the Meet app can deliver personalized experiences while maintaining cost-effectiveness and seamless scalability.
+
+## Getting Started
+1. Clone the repository: `git clone https://github.com/marlinejohn/meet.git`
+2. Install dependencies: npm install
+3. Start the application: npm start
+
+## Scripts
+- `npm start`: Start the development server.
+- `npm build`: Build the application for production.
+- `npm test`: Run tests using JEST.
+- `npm run eject`: Eject from Create React App configuration.
+- `npm run predeploy`: Build script for deployment.
+- `npm run deploy`: Deploy the application to GitHub Pages.
+- 
+## Deployment
+The app is deployed on Gh-pages : https://marlinejohn.github.io/meet/
+
+## Author
+- Marline John
